@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #f4f4f0;
+    --text-color: #212121;
+  }
+
+  [data-theme="dark"] {
+    --bg-color: #212121;
+    --text-color: #f4f4f0;
+
+    --bg-color-hsl: 0, 0%, 0%;
+    --text-color-hsl: 60, 14%, 95%;
+  }
+
+  [data-theme="yellow"] {
+    --bg-color: #dda600;
+    --text-color: #f4f4f0;
+
+    --bg-color-hsl: 0, 0%, 0%;
+    --text-color-hsl: 2, 92%, 53%;
+  }
+
+  [data-theme="purple"] {
+    --bg-color: #39009e;
+    --text-color: #15b2fb;
+
+    --bg-color-hsl: 0, 0%, 0%;
+    --text-color-hsl: 2, 92%, 53%;
+  }
+
+  body {
+    @apply relative text-TextColor bg-BackgroundColor;
+  }
+}
